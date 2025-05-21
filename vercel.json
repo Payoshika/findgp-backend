@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "gp-checker-api",
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { 
+      "src": "/api/(.*)", 
+      "dest": "/api/$1" 
+    }
+  ],
+  "github": {
+    "silent": true
+  }
+}
