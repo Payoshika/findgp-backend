@@ -77,7 +77,7 @@ module.exports = async (req, res) => {
 
     // Determine if likely private based on keyword ratio
     const isLikelyPrivate =
-      privateMatches.length > 0 && privateMatches.length > nhsMatches.length;
+      privateMatches.length > 0 && privateMatches.length >= nhsMatches.length;
 
     return res.json({
       url,
